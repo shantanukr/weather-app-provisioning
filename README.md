@@ -4,11 +4,11 @@ This project demonstrates automated deployment of a Python Flask app using Chef.
 
 ## Structure
 
-- `cookbooks/`: Contains the Chef cookbook `flask_app`.
+- `cookbooks/`: Contains the Chef cookbook `web_api`.
 - `recipes/default.rb`: Installs dependencies and configures Flask, Gunicorn, and Nginx.
 - `templates/`: Includes Nginx and systemd templates.
 - `Berksfile`: Manages cookbook dependencies.
-- `.kitchen.yml`: Optional for local testing with Test Kitchen.
+- `.kitchen.yml`: Local testing with Test Kitchen.
 
 ## Setup
 
@@ -18,4 +18,4 @@ This project demonstrates automated deployment of a Python Flask app using Chef.
 
 ## App
 
-The app is deployed to `/opt/flask_app` and served via Nginx at `http://localhost`.
+The app is deployed to `/opt/weather-app` and served via Nginx at `http://localhost`.
