@@ -36,6 +36,17 @@ template '/etc/nginx/sites-available/weather_app' do
   mode '0644'
 end
 
+# Create the .env file using a template with the secret key
+template '/opt/weather_app/.env' do
+  source '.env.erb'
+  mode '0644'
+  variables({
+    secret_key: node['weather_app']['secret_key']
+  })
+end
+
+
+
 # Enable the Nginx site by linking it from sites-available to sites-enabled
 link '/etc/nginx/sites-enabled/weather_app' do
   to '/etc/nginx/sites-available/weather_app'
