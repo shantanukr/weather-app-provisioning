@@ -1,0 +1,7 @@
+name 'weather_app'
+maintainer 'Shantanu Kumar'
+maintainer_email '@email.com'
+license 'MIT'
+description 'Installs and configures Flask app using Python, Gunicorn, and Nginx'
+version '0.1.0'
+chef_version '>= 15.0'
